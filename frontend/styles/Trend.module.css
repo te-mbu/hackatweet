@@ -1,0 +1,14 @@
+.container {
+    margin : 2rem 0 2rem 1rem;
+    
+}
+
+.hashtag {
+    font-size:x-large;
+    font-weight: bold;
+    color: white;
+}
+
+.description {
+    color: #545D6C
+}

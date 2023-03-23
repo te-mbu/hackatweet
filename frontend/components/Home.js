@@ -1,12 +1,15 @@
 import styles from '../styles/Home.module.css';
+import HomepageLeft from './HomepageLeft'
+import HomepageMiddle from './HomepageMiddle';
+import HomepageRight from './HomepageRight';
 
 function Home() {
   return (
     <div>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <HomepageLeft/>
+        <HomepageMiddle/>
+        <HomepageRight/>
       </main>
     </div>
   );
