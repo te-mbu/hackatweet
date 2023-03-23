@@ -1,5 +1,66 @@
 .container {
     height: 100vh;
     width: 50vw;
-    background-color: red;
+    background-color: black;
+    border-left: 2px solid #545D6C;
+    border-right: 2px solid #545D6C;
+}
+
+.header {
+    margin: 0 0 2rem 0;
+}
+
+.inputTweet::placeholder {
+    font-size: x-large;
+    color: #545D6C;
+    font-weight: bolder;
+}
+
+.title {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+    color: white;
+
+}
+
+.tweetContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputTweet {
+    height: 4rem;
+    width: 80%;
+    background-color: black;
+    border-top: none;
+    border-left: none;
+}
+
+.bottomInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 2rem 5rem 0 0;
+
+}
+
+.nbCharacters {
+    font-size: large;
+    color: white
+}
+
+.tweetBtn {
+    margin: 0 0 0 2rem;
+    background-color: #3E9AF2;
+    padding: 0 2rem;
+    border-radius: 30px;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
 }

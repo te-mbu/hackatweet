@@ -1,0 +1,50 @@
+.container {
+    border-top: 2px solid #545D6C;
+    border-bottom: 2px solid #545D6C;
+    width: 100%;
+}
+
+.userInfos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem;
+}
+
+.profilePicture {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.firstname {
+    margin: 0 0 0 8px;
+    font-size: x-large;
+    font-weight: bolder;
+    color: white;
+}
+
+.username {
+    margin: 0 0 0 8px;
+    font-size: x-large;
+    color: #545D6C
+}
+
+.uploadTime {
+    margin: 0 0 0 8px;
+    font-size: x-large;
+    color: #545D6C
+}
+
+.message {
+    font-size: larger;
+    font-weight: 400;
+    margin: 0 0 1rem 2rem;
+    color: white;
+
+}
+
+.like {
+    margin: 0 0 2rem 2rem;
+    color: white;
+}
