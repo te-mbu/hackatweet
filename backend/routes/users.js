@@ -53,4 +53,20 @@ router.post('/signin', (req, res) => {
   });
 });
 
+//  POST userInfos
+router.post('/infos', (req, res) => {
+  if (!checkBody(req.body, ['token'])) {
+    res.json({ result: false, error: 'Missing or empty fields' });
+    return;
+  }
+
+  User.findOne({token: req.body.token}).then(data => {
+    if (data) {
+      res.json({result: true, data: data})
+    } else {
+      res.json({result: false, error: "No user found"})
+    }
+  })
+})
+
 module.exports = router;

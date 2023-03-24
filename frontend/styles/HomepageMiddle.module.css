@@ -4,14 +4,20 @@
     background-color: black;
     border-left: 2px solid #545D6C;
     border-right: 2px solid #545D6C;
+    overflow-y: auto;
+    /* overflow: hidden; */
 }
+
+.container::-webkit-scrollbar {
+    display: none;
+  }
 
 .header {
     margin: 0 0 2rem 0;
 }
 
 .inputTweet::placeholder {
-    font-size: x-large;
+    font-size:large;
     color: #545D6C;
     font-weight: bolder;
 }
@@ -35,12 +41,14 @@
 }
 
 .inputTweet {
-    height: 4rem;
+    height: 3rem;
     width: 80%;
     background-color: black;
     border-top: none;
     border-left: none;
     color: white;
+    font-size: large;
+    padding: 0 0 0 1rem
 }
 
 .bottomInput {

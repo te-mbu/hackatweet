@@ -11,8 +11,8 @@ router.post("/", function (req, res) {
   }
 
   const newTweet = new Tweet({
-    firstname: "Terence",
-    username: "tmbu",
+    firstname: req.body.firstname,
+    username: req.body.username,
     message: req.body.message,
     isLiked: false,
   });

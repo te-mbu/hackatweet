@@ -10,20 +10,30 @@ function HomepageMiddle() {
     const dispatch = useDispatch();
     const router = useRouter()
 
-
+    
     const [tweetInput, setTweetInput] = useState('')
-
+    const [firstname, setFirstname] = useState('')
+  const [username, setUsername] = useState('')
+    
 	const tweets = useSelector((state) => state.tweets.value);
-    const isAuthenticated = useSelector((state) => state.users)
+    const token = useSelector(state => state.users.value)
     
     useEffect(() => {
-        console.log(isAuthenticated)
-        if (!isAuthenticated) {
+        if (!token) {
             router.push('/')
         }
-    })
-
-    
+        fetch('http://localhost:3000/users/infos', {
+          method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ token: token }),
+        }).then(res => res.json())
+          .then(data => {
+            if (data.result) {
+              setFirstname(data.data.firstname)
+              setUsername(data.data.username)
+            }
+          })
+    }, [])
 
     const onClickSendTweet = () => {
         fetch('http://localhost:3000/tweets', {
@@ -33,7 +43,7 @@ function HomepageMiddle() {
         }).then(res => res.json())
             .then(data => {
                 if (data.result) {
-                    dispatch(addTweet({firstname: 'Terence', username: "tmbu", message: tweetInput}))
+                    dispatch(addTweet({firstname: firstname, username: username, message: tweetInput}))
                     setTweetInput('')
                 }
             })
