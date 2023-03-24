@@ -1,0 +1,145 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.left{
+  z-index: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height : 100vh;
+  width : 40vw;
+  background-color: grey;
+}
+
+.logoleft{
+  display: flex;
+  height: 30vh;
+  width:30vh;
+  border: solid 1px black;
+  object-fit: contain;
+}
+
+.right{
+  z-index: 0;
+  position: relative;
+  height : 100vh;
+  width : 60vw;
+  background: rgb(17 24 32);
+
+}
+
+.logoright{
+  display: flex;
+  height: 10vh;
+  width:10vh;
+  margin-top: 3vh;
+  margin-left: 3vh;
+}
+
+.title{
+  color : white;
+  margin-top: 10vh;
+  margin-left: 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.subtitle{
+  color : white;
+  margin-top: 5vh;
+  margin-left: 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+.smalltext{
+  color : white;
+  margin-top: 5vh;
+  margin-left: 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.signup{
+  border-radius: 50px;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  width: 10vw;
+  height: 4vh;
+  color: white;
+  background: rgb(45 121 209);
+  
+  
+}
+.signin{
+  border-radius: 50px;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  width: 10vw;
+  height: 4vh;
+  color: rgb(45 121 209);
+  background-color: transparent;
+  
+}
+
+
+.signUpModal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position:relative;
+  background: rgb(17 24 32);
+  padding : 0px; 
+}
+
+.signInModal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position:relative;
+  background: rgb(17 24 32);
+}
+
+.btnClose{
+  align-self: flex-end;
+  color: red;
+}
+.logmodallogo{
+  display: flex;
+  height: 10vh;
+  width:10vh;
+  margin-top: 5px;
+  object-fit: contain
+
+}
+.logmodaltitle{
+  color : white;
+  margin-top: 5vh;
+  margin-left: 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.modalsign{
+  border-radius: 50px;
+  margin-top: 5vh;
+  width: 10vw;
+  height: 4vh;
+  color: rgb(17 24 32);
+  background: white;
+}  
