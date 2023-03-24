@@ -1,15 +1,29 @@
 import styles from '../styles/HomepageMiddle.module.css';
 import Tweet from './Tweet';
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { addTweet, deleteAllTweets } from '../reducers/tweets';
 import findHashtags from '../modules/findHashtags';
+import { useRouter } from 'next/router';
 
 function HomepageMiddle() {
-    const [tweetInput, setTweetInput] = useState('')
-	const tweets = useSelector((state) => state.tweets.value);
-    
     const dispatch = useDispatch();
+    const router = useRouter()
+
+
+    const [tweetInput, setTweetInput] = useState('')
+
+	const tweets = useSelector((state) => state.tweets.value);
+    const isAuthenticated = useSelector((state) => state.users)
+    
+    useEffect(() => {
+        console.log(isAuthenticated)
+        if (!isAuthenticated) {
+            router.push('/')
+        }
+    })
+
+    
 
     const onClickSendTweet = () => {
         fetch('http://localhost:3000/tweets', {
