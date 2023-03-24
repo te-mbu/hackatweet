@@ -11,8 +11,11 @@ export const tweetsSlice = createSlice({
 		addTweet: (state, action) => {
 			state.value.push(action.payload);
 		},
+        deleteAllTweets: (state, action) => {
+            state.value = [];
+        }
 	},
 });
 
-export const { addTweet } = tweetsSlice.actions;
+export const { addTweet, deleteAllTweets } = tweetsSlice.actions;
 export default tweetsSlice.reducer;

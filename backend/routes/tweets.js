@@ -14,11 +14,12 @@ router.post("/", function (req, res) {
     firstname: "Terence",
     username: "tmbu",
     message: req.body.message,
+    isLiked: false,
   });
 
   // Save new tweet to database
   newTweet.save().then(() => {
-    res.json({ result: true, message: 'Tweet saved to the DB' });
+    res.json({ result: true, message: 'Tweet saved in the DB' });
   });
 });
 
@@ -31,4 +32,5 @@ router.delete('/', (req, res) => {
         }
     })
 })
+
 module.exports = router;
