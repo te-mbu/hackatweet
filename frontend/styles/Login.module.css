@@ -9,22 +9,12 @@
 
 .left{
   z-index: 0;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   height : 100vh;
   width : 40vw;
-  background-color: grey;
 }
 
 .logoleft{
-  display: flex;
-  height: 30vh;
-  width:30vh;
-  border: solid 1px black;
-  object-fit: contain;
+  max-height: 100vh;
 }
 
 .right{
@@ -63,8 +53,7 @@
 }
 .smalltext{
   color : white;
-  margin-top: 5vh;
-  margin-left: 2vw;
+  margin: 2rem 0 2rem 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -72,8 +61,8 @@
 
 .signup{
   border-radius: 50px;
-  margin-top: 5vh;
-  margin-left: 5vw;
+  margin: 2rem 0 0 5rem;
+
   width: 10vw;
   height: 4vh;
   color: white;
@@ -83,8 +72,7 @@
 }
 .signin{
   border-radius: 50px;
-  margin-top: 5vh;
-  margin-left: 5vw;
+  margin: 0 0 0 5rem;
   width: 10vw;
   height: 4vh;
   color: rgb(45 121 209);
@@ -99,8 +87,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
-  position:relative;
-  background: rgb(17 24 32);
+  background-color: rgb(17 24 32);
   padding : 0px; 
 }
 
@@ -111,25 +98,25 @@
   align-items: center;
   z-index: 1;
   position:relative;
-  background: rgb(17 24 32);
+  background-color: rgb(17 24 32);
 }
 
 .btnClose{
   align-self: flex-end;
   color: red;
 }
+
 .logmodallogo{
   display: flex;
-  height: 10vh;
-  width:10vh;
-  margin-top: 5px;
-  object-fit: contain
+  height: 5rem;
+  width:5rem;
+  object-fit: contain;
+  margin: 2rem 0 0 0 
 
 }
 .logmodaltitle{
   color : white;
-  margin-top: 5vh;
-  margin-left: 2vw;
+  margin: 2rem 0 2rem 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -137,9 +124,36 @@
 
 .modalsign{
   border-radius: 50px;
-  margin-top: 5vh;
+  margin: 2rem 0 2rem 0;
   width: 10vw;
   height: 4vh;
   color: rgb(17 24 32);
   background: white;
 }  
+
+.inputfirstname {
+  margin: 0 0 1rem 0;
+  background-color: rgb(17 24 32);
+  padding: 10px 2rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+}
+
+.inputuser {
+  margin: 0 0 1rem 0;
+  background-color: rgb(17 24 32);
+  padding: 10px 2rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+}
+
+.inputpassword {
+  margin: 0 0 1rem 0;
+  background-color: rgb(17 24 32);
+  padding: 10px 2rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+}

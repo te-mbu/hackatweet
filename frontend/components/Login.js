@@ -1,7 +1,6 @@
 import styles from "../styles/Login.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Modal, Button } from "antd";
-import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "../reducers/users";
 import { useRouter } from "next/router";
@@ -50,21 +49,19 @@ function Login() {
   if (isSignUpModalVisible) {
     modalSignUp = (
       <div className={styles.signUpModal}>
-        <div className={styles.logmodallogo}>
-          <img src="logo.png" />
-        </div>
+        <img className={styles.logmodallogo} src="logo.png" />
         <div className={styles.logmodaltitle}>
           Create your Hackatweet account
         </div>
         <input
           onChange={(e) => setSignupFirstname(e.target.value)}
           className={styles.inputfirstname}
-          placeholder="FirstName"
+          placeholder="Firstname"
         ></input>
         <input
           onChange={(e) => setSignupUsername(e.target.value)}
           className={styles.inputuser}
-          placeholder="UserName"
+          placeholder="Username"
         ></input>
         <input
           onChange={(e) => setSignupPassword(e.target.value)}
@@ -100,9 +97,9 @@ function Login() {
       .then((data) => {
         if (data.result) {
           dispatch(login(data.token));
-          router.push("/homepage");
           setSigninUsername("");
           setSigninPassword("");
+          router.push("/homepage");
         }
       });
   }
@@ -117,12 +114,10 @@ function Login() {
   let modalSignIn;
   if (isSignInModalVisible) {
     modalSignIn = (
-      <div className={styles.signUpModal}>
-        <div className={styles.logmodallogo}>
-          <img src="logo.png" />
-        </div>
+      <div className={styles.signInModal}>
+        <img className={styles.logmodallogo} src="logo.png" />
         <div className={styles.logmodaltitle}>Connect to Hackatweet</div>
-        <input onChange={e => setSigninUsername(e.target.value)} className={styles.inputuser} placeholder="UserName"></input>
+        <input onChange={e => setSigninUsername(e.target.value)} className={styles.inputuser} placeholder="Username"></input>
         <input
           onChange={e => setSigninPassword(e.target.value)}
           className={styles.inputpassword}
@@ -138,9 +133,7 @@ function Login() {
     <div>
       <main className={styles.main}>
         <div className={styles.left}>
-          <div className={styles.logoleft}>
-            <img src="logo.png" />
-          </div>
+            <img className={styles.logoleft} src="login-background.jpg" alt="left background" />
         </div>
 
         <div className={styles.right}>
@@ -163,7 +156,7 @@ function Login() {
         </div>
 
         {isSignUpModalVisible && (
-          <div id="react-modals">
+          <div>
             <Modal
               className={styles.signUpModal}
               visible={isSignUpModalVisible}
@@ -177,7 +170,7 @@ function Login() {
         )}
 
         {isSignInModalVisible && (
-          <div id="react-modals">
+          <div>
             <Modal
               className={styles.signInModal}
               visible={isSignInModalVisible}
