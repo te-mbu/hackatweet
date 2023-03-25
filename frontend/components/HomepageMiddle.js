@@ -3,7 +3,6 @@ import Tweet from './Tweet';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { addTweet, deleteAllTweets } from '../reducers/tweets';
-import findHashtags from '../modules/findHashtags';
 import { useRouter } from 'next/router';
 
 function HomepageMiddle() {
@@ -49,7 +48,6 @@ function HomepageMiddle() {
             })
     }
     const allTweets = tweets.map((data, i) => {
-        // const hash = data.message.split(' ').filter(v=> v.startsWith('#'))
         return <Tweet key={i} {...data} />
     })
 

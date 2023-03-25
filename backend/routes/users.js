@@ -53,7 +53,7 @@ router.post('/signin', (req, res) => {
   });
 });
 
-//  POST userInfos
+//  POST /infos
 router.post('/infos', (req, res) => {
   if (!checkBody(req.body, ['token'])) {
     res.json({ result: false, error: 'Missing or empty fields' });

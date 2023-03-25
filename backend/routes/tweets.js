@@ -33,4 +33,22 @@ router.delete('/', (req, res) => {
     })
 })
 
+// GET /hashtags
+router.get('/hashtags', (req, res) => {
+  Tweet.find({}).then(data => {
+    if (data) {
+      let hashtags = []
+      for (let tweet of data) {
+        let hashtag = tweet.message.split(' ').filter(v=> v.startsWith('#'))
+        for (let str of hashtag) {
+          hashtags.push(str)
+        }
+      }
+      res.json({result: true, hashtags: hashtags})
+    } else {
+      res.json({result: false})
+    }
+  })
+})
+
 module.exports = router;
