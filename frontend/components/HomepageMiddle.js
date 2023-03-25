@@ -38,7 +38,7 @@ function HomepageMiddle() {
         fetch('http://localhost:3000/tweets', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ message: tweetInput }),
+			body: JSON.stringify({ firstname:firstname, username:username, message: tweetInput }),
         }).then(res => res.json())
             .then(data => {
                 if (data.result) {
@@ -60,7 +60,7 @@ function HomepageMiddle() {
         <div className={styles.header}>
             <h1 className={styles.title}>Home</h1>
             <div className={styles.tweetContainer}>
-                <input onChange={(e) => setTweetInput(e.target.value)} maxLength="280" className={styles.inputTweet} placeholder="What's up ?" type="text" />
+                <input onChange={(e) => setTweetInput(e.target.value)} value={tweetInput} maxLength="280" className={styles.inputTweet} placeholder="What's up ?" type="text" />
             </div>
             <div className={styles.bottomInput}>
                 <p className={styles.nbCharacters}>{tweetInput.length}/280</p>
