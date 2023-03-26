@@ -28,10 +28,22 @@
 
 .logoright{
   display: flex;
-  height: 10vh;
-  width:10vh;
-  margin-top: 3vh;
-  margin-left: 3vh;
+  height: 5rem;
+  width:5rem;
+  margin : 2rem 0 0 2rem;
+  /* Define the roation center to to the center of the image */
+  transform-origin: center center;
+  /* Define the rotation speed */
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .title{
