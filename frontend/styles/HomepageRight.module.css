@@ -6,6 +6,7 @@
     width: 30vw;
     background-color: black;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .title {
