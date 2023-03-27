@@ -12,4 +12,9 @@ body {
 .ant-modal .ant-modal-content
 {
   padding: 0px;
+  width: 100%;
+}
+
+.ant-modal .ant-modal-close {
+  color: white;
 }
