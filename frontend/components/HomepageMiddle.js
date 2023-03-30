@@ -65,7 +65,7 @@ function HomepageMiddle() {
             <div className={styles.bottomInput}>
                 <p className={styles.nbCharacters}>{tweetInput.length}/280</p>
                 <button onClick={() => onClickSendTweet()} className={styles.tweetBtn}>Tweet</button>
-                <button onClick={() => dispatch(deleteAllTweets())}>Delete all tweet states "TEST purpose"</button>
+                {/* <button onClick={() => dispatch(deleteAllTweets())}>Delete all tweet states "TEST purpose"</button> */}
             </div>
         </div>
         <div className={styles.tweetContainer}>

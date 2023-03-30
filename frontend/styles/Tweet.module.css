@@ -4,11 +4,35 @@
     width: 100%;
 }
 
+.topTweet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .userInfos {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 2rem;
+}
+
+.deleteBtnContainer {
+    margin: 1rem;
+    height: 1rem;
+    width: auto;
+}
+
+.deleteBtn {
+    color: white;
+    width: 5px;
+    height: 5px;
+    font-weight: bold;
+}
+
+.deleteBtn:hover {
+    color: red;
+    cursor: pointer;
 }
 
 .profilePicture {
