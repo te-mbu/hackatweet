@@ -19,6 +19,15 @@ function Tweet(props) {
     isLiked ? setCountLike(1) : setCountLike(0)
   }, [isLiked])
 
+  function handleDeleteBtn() {
+    dispatch(deleteTweet(props.message))
+    fetch('http://localhost:3000/tweets', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: props.message }),
+    })
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.topTweet}>
@@ -28,12 +37,13 @@ function Tweet(props) {
             <p className={styles.username}><span>@</span>{props.username}</p>
             <p className={styles.uploadTime}>5 hours</p>
         </div>
-        <div onClick={() => dispatch(deleteTweet(props.message))} className={styles.deleteBtnContainer}><span className={styles.deleteBtn}>x</span></div>
+        <div onClick={() => handleDeleteBtn()} className={styles.deleteBtnContainer}><span className={styles.deleteBtn}>x</span></div>
       </div>
         <div className={styles.message}>{props.message}</div>
         <div className={styles.like} ><FontAwesomeIcon onClick={() => setIsLiked(!isLiked)} icon={faHeart} style={isLikedStyle}/><span className={styles.countLike}>{countLike}</span></div>
     </div>
   );
 }
+
 
 export default Tweet;
