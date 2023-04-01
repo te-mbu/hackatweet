@@ -23,7 +23,7 @@
 }
 
 .title {
-    height: 5rem;
+    font-size:xx-large;
     width: 100%;
     display: flex;
     justify-content: left;
@@ -44,8 +44,10 @@
     height: 3rem;
     width: 80%;
     background-color: black;
-    border-top: none;
-    border-left: none;
+    border-top-style: hidden;
+    border-right-style: outset;
+    border-left-style: hidden;
+    border-bottom-style:outset;
     color: white;
     font-size: large;
     padding: 0 0 0 1rem
@@ -69,7 +71,7 @@
     background-color: #3E9AF2;
     padding: 0 2rem;
     border-radius: 30px;
-    font-size: larger;
+    font-size:medium;
     font-weight: bold;
     color: white;
 }

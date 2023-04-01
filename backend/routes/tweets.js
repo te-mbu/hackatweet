@@ -23,6 +23,7 @@ router.post("/", function (req, res) {
   });
 });
 
+// DELETE /
 router.delete('/', (req, res) => {
     Tweet.deleteOne({message: req.body.message}).then(data => {
         if (data) {
@@ -41,7 +42,12 @@ router.get('/hashtags', (req, res) => {
       for (let tweet of data) {
         let hashtag = tweet.message.split(' ').filter(v=> v.startsWith('#'))
         for (let str of hashtag) {
-          hashtags.push(str)
+          const trendIndex = hashtags.findIndex(data => data.hashtag === str)
+          if (trendIndex === -1) {
+            hashtags.push({hashtag: str, count: 1})
+          } else {
+            hashtags[trendIndex].count++;
+          }
         }
       }
       res.json({result: true, hashtags: hashtags})
@@ -50,5 +56,6 @@ router.get('/hashtags', (req, res) => {
     }
   })
 })
+
 
 module.exports = router;

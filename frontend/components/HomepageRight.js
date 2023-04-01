@@ -18,7 +18,7 @@ function HomepageRight() {
       })
   }, [tweets])
   const displayHashtags = hashtags.map((data, i) => {
-    return <Trend hashtags={data}/>
+    return <Trend hashtags={data.hashtag} count={data.count}/>
   })
 
   return (
